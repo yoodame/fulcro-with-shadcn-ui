@@ -1,3 +1,15 @@
+.idea
+*.iml
+.nrepl-port
+resources/public/js
+target
+componentInfo
+pom.xml.asc
+.cpcache
+.shadow-cljs
+node_modules/
+.lsp
+
 .yarn/*
 !.yarn/patches
 !.yarn/plugins

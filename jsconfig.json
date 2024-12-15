@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["shadcn/*"]
+    },
+    "outDir": "./src/js"
+  },
+  "include": ["src/shadcn"],
+  "exclude": [
+    "node_modules"
+  ]
+}

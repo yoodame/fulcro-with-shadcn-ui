@@ -1,0 +1,14 @@
+{
+  "presets": [
+  ["@babel/preset-env", {"targets": {"esmodules": true}}],
+  "@babel/preset-react"],
+  "plugins": [
+      ["module-resolver", {
+        "root": ["./src"],
+        "alias": {
+            "@": "./src/shadcn"
+         }
+      }],
+      "dynamic-import-node"
+     ]
+}

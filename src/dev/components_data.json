@@ -1,0 +1,474 @@
+{
+  "Accordion": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/accordion#root",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/accordion",
+    "description": "Contains all the parts of an accordion.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "When true, changes the rendered element to the one passed as a child, merging their props."
+      },
+      {
+        "name": "type",
+        "type": "single | multiple",
+        "description": "Determines whether one (single) or multiple (multiple) items can be opened at once.",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "description": "Controlled value of the opened item when type=single. Must be used with onValueChange.",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "description": "Initial open item value when rendered and type=single, for uncontrolled usage.",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "(value: string) => void",
+        "description": "Callback when expanded state of item changes (type=single).",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string[]",
+        "default": "[]",
+        "description": "Controlled values of opened items when type=multiple. Must be used with onValueChange.",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string[]",
+        "default": "[]",
+        "description": "Initial array of opened items when rendered and type=multiple, for uncontrolled usage.",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "(value: string[]) => void",
+        "description": "Callback when expanded state of items changes (type=multiple).",
+        "required": false
+      },
+      {
+        "name": "collapsible",
+        "type": "boolean",
+        "default": "false",
+        "description": "When type=single, allows all items to be closed by clicking the open item again.",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "When true, prevents user interaction with the entire accordion.",
+        "required": false
+      },
+      {
+        "name": "dir",
+        "type": "ltr | rtl",
+        "default": "ltr",
+        "description": "Reading direction. If omitted, assumes LTR.",
+        "required": false
+      },
+      {
+        "name": "orientation",
+        "type": "horizontal | vertical",
+        "default": "vertical",
+        "description": "The orientation of the accordion.",
+        "required": false
+      }
+    ],
+    "dataAttributes": [
+      {
+        "attribute": "[data-orientation]",
+        "values": "vertical or horizontal"
+      }
+    ],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/accordion#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/accordion#accessibility"
+  },
+  "AccordionItem": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/accordion#item",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/accordion",
+    "description": "Contains all the parts of a collapsible section.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "When true, changes the rendered element to the one passed as a child, merging their props."
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "When true, prevents the user from interacting with this item."
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "description": "A unique string value that identifies the item.",
+        "required": true
+      }
+    ],
+    "dataAttributes": [
+      {
+        "attribute": "[data-state]",
+        "values": "open or closed"
+      },
+      {
+        "attribute": "[data-disabled]",
+        "values": "Present when disabled"
+      },
+      {
+        "attribute": "[data-orientation]",
+        "values": "vertical or horizontal"
+      }
+    ],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/accordion#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/accordion#accessibility"
+  },
+  "AccordionHeader": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/accordion#header",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/accordion",
+    "description": "Wraps an Accordion.Trigger. Typically a heading element.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "When true, changes the rendered element to the one passed as a child, merging their props."
+      }
+    ],
+    "dataAttributes": [
+      {
+        "attribute": "[data-state]",
+        "values": "open or closed"
+      },
+      {
+        "attribute": "[data-disabled]",
+        "values": "Present when disabled"
+      },
+      {
+        "attribute": "[data-orientation]",
+        "values": "vertical or horizontal"
+      }
+    ],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/accordion#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/accordion#accessibility"
+  },
+  "AccordionTrigger": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/accordion#trigger",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/accordion",
+    "description": "Toggles the collapsed state of its associated item.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "When true, changes the rendered element to the one passed as a child, merging their props."
+      }
+    ],
+    "dataAttributes": [
+      {
+        "attribute": "[data-state]",
+        "values": "open or closed"
+      },
+      {
+        "attribute": "[data-disabled]",
+        "values": "Present when disabled"
+      },
+      {
+        "attribute": "[data-orientation]",
+        "values": "vertical or horizontal"
+      }
+    ],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/accordion#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/accordion#accessibility"
+  },
+  "AccordionContent": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/accordion#content",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/accordion",
+    "description": "Contains the collapsible content for an item.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "When true, changes the rendered element to the one passed as a child, merging their props."
+      },
+      {
+        "name": "forceMount",
+        "type": "boolean",
+        "description": "Forces the content to remain mounted when closed, useful for animations."
+      }
+    ],
+    "dataAttributes": [
+      {
+        "attribute": "[data-state]",
+        "values": "open or closed"
+      },
+      {
+        "attribute": "[data-disabled]",
+        "values": "Present when disabled"
+      },
+      {
+        "attribute": "[data-orientation]",
+        "values": "vertical or horizontal"
+      }
+    ],
+    "cssVariables": [
+      {
+        "name": "--radix-accordion-content-width",
+        "description": "The width of the content when it opens/closes."
+      },
+      {
+        "name": "--radix-accordion-content-height",
+        "description": "The height of the content when it opens/closes."
+      }
+    ],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/accordion#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/accordion#accessibility"
+  },
+  "AlertDialog": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#root",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/alert-dialog",
+    "ariaLink": "https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog",
+    "description": "A modal dialog that interrupts the user with important content and expects a response.",
+    "props": [
+      {
+        "name": "defaultOpen",
+        "type": "boolean",
+        "description": "The open state of the dialog when initially rendered. Use when you do not need to control its open state."
+      },
+      {
+        "name": "open",
+        "type": "boolean",
+        "description": "The controlled open state of the dialog. Must be used in conjunction with onOpenChange."
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(open: boolean) => void",
+        "description": "Event handler called when the open state of the dialog changes."
+      }
+    ],
+    "dataAttributes": [],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#accessibility"
+  },
+  "AlertDialogTrigger": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#trigger",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/alert-dialog",
+    "description": "A button that opens the dialog.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "Change the default rendered element for the one passed as a child, merging their props."
+      }
+    ],
+    "dataAttributes": [
+      {
+        "attribute": "[data-state]",
+        "values": "open or closed"
+      }
+    ],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#accessibility"
+  },
+  "AlertDialogPortal": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#portal",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/alert-dialog",
+    "description": "Portals the overlay and content into the body by default.",
+    "props": [
+      {
+        "name": "forceMount",
+        "type": "boolean",
+        "description": "Forces mounting when more control is needed, useful for controlling animations."
+      },
+      {
+        "name": "container",
+        "type": "HTMLElement",
+        "default": "document.body",
+        "description": "Specify a container element to portal the content into."
+      }
+    ],
+    "dataAttributes": [],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#accessibility"
+  },
+  "AlertDialogOverlay": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#overlay",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/alert-dialog",
+    "description": "A layer that covers the inert portion of the view when the dialog is open.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "Change the default rendered element for the one passed as a child, merging their props."
+      },
+      {
+        "name": "forceMount",
+        "type": "boolean",
+        "description": "Forces mounting when more control is needed. Inherits from AlertDialog.Portal."
+      }
+    ],
+    "dataAttributes": [
+      {
+        "attribute": "[data-state]",
+        "values": "open or closed"
+      }
+    ],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#accessibility"
+  },
+  "AlertDialogContent": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#content",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/alert-dialog",
+    "description": "Contains content to be rendered when the dialog is open.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "Change the default rendered element for the one passed as a child, merging their props."
+      },
+      {
+        "name": "forceMount",
+        "type": "boolean",
+        "description": "Forces mounting when more control is needed. Inherits from AlertDialog.Portal."
+      },
+      {
+        "name": "onOpenAutoFocus",
+        "type": "(event: Event) => void",
+        "description": "Called when focus moves to the destructive action after opening. Can prevent by event.preventDefault."
+      },
+      {
+        "name": "onCloseAutoFocus",
+        "type": "(event: Event) => void",
+        "description": "Called when focus moves to the trigger after closing. Can prevent by event.preventDefault."
+      },
+      {
+        "name": "onEscapeKeyDown",
+        "type": "(event: KeyboardEvent) => void",
+        "description": "Called when the escape key is pressed. Can prevent by event.preventDefault."
+      }
+    ],
+    "dataAttributes": [
+      {
+        "attribute": "[data-state]",
+        "values": "open or closed"
+      }
+    ],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#accessibility"
+  },
+  "AlertDialogCancel": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#cancel",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/alert-dialog",
+    "description": "A button that closes the dialog, visually distinct from AlertDialog.Action.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "Change the default rendered element for the one passed as a child, merging their props."
+      }
+    ],
+    "dataAttributes": [],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#accessibility"
+  },
+  "AlertDialogAction": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#action",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/alert-dialog",
+    "description": "A button that closes the dialog, visually distinct from AlertDialog.Cancel.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "Change the default rendered element for the one passed as a child, merging their props."
+      }
+    ],
+    "dataAttributes": [],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#accessibility"
+  },
+  "AlertDialogTitle": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#title",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/alert-dialog",
+    "description": "An accessible name announced when the dialog is opened.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "Change the default rendered element for the one passed as a child, merging their props."
+      }
+    ],
+    "dataAttributes": [],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#accessibility"
+  },
+  "AlertDialogDescription": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#description",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/alert-dialog",
+    "description": "An accessible description announced when the dialog is opened.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "Change the default rendered element for the one passed as a child, merging their props."
+      }
+    ],
+    "dataAttributes": [],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/alert-dialog#accessibility"
+  },
+  "AspectRatio": {
+    "radixLink": "https://www.radix-ui.com/primitives/docs/components/aspect-ratio#root",
+    "shadcnLink": "https://ui.shadcn.com/docs/components/aspect-ratio",
+    "description": "Displays content within a desired ratio.",
+    "props": [
+      {
+        "name": "asChild",
+        "type": "boolean",
+        "default": "false",
+        "description": "Change the default rendered element for the one passed as a child, merging their props."
+      },
+      {
+        "name": "ratio",
+        "type": "number",
+        "default": "1",
+        "description": "The desired ratio for the content."
+      }
+    ],
+    "dataAttributes": [],
+    "cssVariables": [],
+    "examplesLink": "https://www.radix-ui.com/primitives/docs/components/aspect-ratio#examples",
+    "accessibilityLink": "https://www.radix-ui.com/primitives/docs/components/aspect-ratio#accessibility"
+  }
+
+}

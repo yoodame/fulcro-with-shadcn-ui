@@ -1,0 +1,17 @@
+{:deps   {:aliases [:dev]}
+ :nrepl  {:port 9000}
+ :dev-http {8023 "resources/public"}
+ :builds {:workspaces {:target     nubank.workspaces.shadow-cljs.target
+                       :ns-regexp  "-(card|cards)$"
+                       :output-dir "resources/public/js/workspaces"
+                       :asset-path "/js/workspaces"
+                       :compiler-options {:external-config {:fulcro {:html-source-annotations? true}}}
+                       :preloads         [com.fulcrologic.fulcro.inspect.preload
+                                          com.fulcrologic.fulcro.inspect.dom-picker-preload]
+                       #_#_:js-options {:resolve {"@radix-ui/react-slot" {:use "src/shadcn/node_modules"}}
+                                        :babel-config {:presets [["@babel/preset-env" {:modules false}]
+                                                                 "@babel/preset-react"]
+                                                       :plugins [["@babel/plugin-transform-react-jsx"
+                                                                  {:runtime "classic"}]]}}}}
+ :npm-deps {:react     "^18.2.0"
+            :react-dom "^18.2.0"}}
